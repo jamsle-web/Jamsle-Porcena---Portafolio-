@@ -7,7 +7,7 @@
     <!-- SEO PRO -->
     <title>Jamsle Porcena | Diseño Web, UI/UX & Marketing Digital</title>
     <meta name="description" content="Portafolio oficial de Jamsle Porcena. Especialista en diseño web, UI/UX, desarrollo frontend y marketing digital.">
-    <meta name="keywords" content="Jamsle Porcena, diseño web, UI/UX, desarrollador frontend, marketing digital, portafolio, Three.js, GSAP">
+    <meta name="keywords" content="Jamsle Porcena, diseño web, UI/UX, desarrollador frontend, marketing digital, portafolio">
     <meta name="author" content="Jamsle Porcena">
     <meta name="robots" content="index, follow">
     
@@ -33,19 +33,14 @@
     }
     </script>
 
-    <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-
-    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <!-- Tu CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -53,11 +48,9 @@
     <div id="scroll-progress"></div>
     <canvas id="webgl-canvas"></canvas>
 
-    <div class="loader">
-        <div class="loader-text">JP</div>
-    </div>
+    <div class="loader"><div class="loader-text">JP</div></div>
 
-    <!-- HEADER (MENÚ DEL TECHO) -->
+    <!-- HEADER -->
     <header class="main-header" id="mainHeader">
         <a href="#inicio" class="header-logo">JP</a>
         <nav class="header-nav">
@@ -68,7 +61,6 @@
             <a href="#contacto">Contacto</a>
         </nav>
         <div class="header-right">
-            <!-- Selector de Idiomas -->
             <div class="lang-switcher-container">
                 <button class="lang-btn-main" id="langBtn"><i class="fas fa-globe"></i></button>
                 <div class="lang-menu" id="langMenu">
@@ -94,35 +86,20 @@
                         <span data-i18n="hero.greet">Hola, soy</span><br>
                         <span class="highlight" id="typewriter-text"></span>
                     </h1>
-                    <p class="fade-up" data-i18n="hero.desc">
-                        Diseñador web y especialista en marketing digital apasionado por transformar ideas en identidades digitales sólidas. Combino diseño, tecnología e IA para hacer crecer tu marca.
-                    </p>
+                    <p class="fade-up" data-i18n="hero.desc">Diseñador web y especialista en marketing digital apasionado por transformar ideas en identidades digitales sólidas.</p>
                     <div class="hero-actions fade-up">
-                        <a href="#proyectos" class="btn-magnetic">
-                            <i class="fas fa-arrow-right"></i> <span data-i18n="hero.btn_projects">Ver proyectos</span>
-                        </a>
-                        <a href="https://wa.me/18099995904" target="_blank" class="btn-glass">
-                            <i class="fas fa-paper-plane"></i> <span data-i18n="hero.btn_contact">Hablemos</span>
-                        </a>
+                        <a href="#proyectos" class="btn-magnetic"><i class="fas fa-arrow-right"></i> <span data-i18n="hero.btn_projects">Ver proyectos</span></a>
+                        <a href="https://wa.me/18099995904" target="_blank" class="btn-glass"><i class="fas fa-paper-plane"></i> <span data-i18n="hero.btn_contact">Hablemos</span></a>
                         
-                        <!-- BOTÓN DE DESCARGA CON MENÚ DESPLEGABLE -->
                         <div class="cv-dropdown-container">
-                            <button class="btn-glass" id="cvBtn">
-                                <i class="fas fa-download"></i> <span data-i18n="hero.btn_cv">Descargar CV</span>
-                            </button>
+                            <button class="btn-glass" id="cvBtn"><i class="fas fa-download"></i> <span data-i18n="hero.btn_cv">Descargar CV</span></button>
                             <div class="cv-menu" id="cvMenu">
-                                <a href="cv-marketing.pdf" target="_blank" class="cv-opt">
-                                    <i class="fas fa-bullhorn"></i> <span data-i18n="cv.marketing">CV Marketing & Design</span>
-                                </a>
-                                <a href="cv-languages.pdf" target="_blank" class="cv-opt">
-                                    <i class="fas fa-language"></i> <span data-i18n="cv.languages">CV Languages Specialist</span>
-                                </a>
+                                <a href="cv-marketing.pdf" target="_blank" class="cv-opt"><i class="fas fa-bullhorn"></i> <span data-i18n="cv.marketing">CV Marketing & Design</span></a>
+                                <a href="cv-languages.pdf" target="_blank" class="cv-opt"><i class="fas fa-language"></i> <span data-i18n="cv.languages">CV Languages Specialist</span></a>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
-                
                 <div class="hero-portrait fade-up">
                     <div class="portrait-inner">
                         <img src="https://i.postimg.cc/SKrgYWmr/Retrato-de-un-202604091107-(1).jpg" alt="Jamsle Porcena" loading="lazy">
@@ -152,12 +129,13 @@
             </div>
         </section>
 
-        <!-- SKILLS -->
+        <!-- SKILLS REDISEÑADO (CON ICONOS Y PÍLDORAS) -->
         <section id="skills">
             <div class="section-header reveal-text">
                 <h2><span data-i18n="skills.title1">Stack &</span> <br><span class="highlight" data-i18n="skills.title2">Habilidades</span></h2>
             </div>
             <div class="skills-bento">
+                <!-- Frontend (Iconos reales) -->
                 <div class="glass-card bento-item large fade-up">
                     <div class="card-content">
                         <div class="bento-icon"><i class="fas fa-code"></i></div>
@@ -165,10 +143,15 @@
                         <h3 data-i18n="skills.dev_title">Desarrollo Creativo</h3>
                         <p data-i18n="skills.dev_desc">Interfaces inmersivas con HTML5, CSS3, JavaScript, Three.js y GSAP.</p>
                         <div class="stack-list" style="margin-top:auto;">
-                            <span>HTML5</span><span>CSS3</span><span>JS</span><span>Three.js</span><span>GSAP</span>
+                            <span><i class="fab fa-html5" style="color: #e34f26;"></i> HTML5</span>
+                            <span><i class="fab fa-css3-alt" style="color: #264de4;"></i> CSS3</span>
+                            <span><i class="fab fa-js" style="color: #f7df1e;"></i> JS</span>
+                            <span><i class="fas fa-cube" style="color: #fff;"></i> Three.js</span>
+                            <span><i class="fas fa-bolt" style="color: #88ce02;"></i> GSAP</span>
                         </div>
                     </div>
                 </div>
+                <!-- UI/UX -->
                 <div class="glass-card bento-item medium fade-up">
                     <div class="card-content">
                         <div class="bento-icon"><i class="fas fa-pencil-ruler"></i></div>
@@ -177,29 +160,93 @@
                         <p data-i18n="skills.uiux_desc">Sistemas visuales, prototipado y landing pages optimizadas.</p>
                     </div>
                 </div>
+                <!-- Tools -->
                 <div class="glass-card bento-item small fade-up">
                     <div class="card-content">
                         <div class="bento-icon"><i class="fas fa-tools"></i></div>
                         <h3 data-i18n="skills.tools">Tools</h3>
-                        <p data-i18n="skills.tools_desc">Figma, VS Code, WordPress, Webflow, Git.</p>
+                        <div class="stack-list" style="margin-top: 10px;">
+                            <span><i class="fab fa-figma" style="color: #f24e1e;"></i> Figma</span>
+                            <span><i class="fas fa-code" style="color: #007acc;"></i> VS Code</span>
+                            <span><i class="fab fa-wordpress" style="color: #21759b;"></i> WP</span>
+                            <span><i class="fas fa-globe" style="color: #4353ff;"></i> Webflow</span>
+                        </div>
                     </div>
                 </div>
+                <!-- Especialidades -->
                 <div class="glass-card bento-item wide fade-up">
                     <div class="card-content">
                         <div class="tag" data-i18n="skills.workflow">Workflow</div>
                         <h3 data-i18n="skills.spec_title">Especialidades & Herramientas</h3>
-                        <div class="stack-list" style="margin-top:10px;">
+                        <div class="stack-list" style="margin-top:15px;">
                             <span>SEO</span><span>UX Research</span><span>Landing Pages</span>
-                            <span>CMS</span><span data-i18n="skills.ai">IA & Edición</span><span>WordPress</span>
-                            <span>Webflow</span><span>Figma</span>
+                            <span>CMS</span><span data-i18n="skills.ai">IA & Edición</span><span>Git</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- CÓMO TRABAJO (VALORES) -->
+        <section id="valores" style="background: rgba(255,255,255,0.01);">
+            <div class="section-header reveal-text">
+                <h2><span data-i18n="values.title1">Cómo</span> <br><span class="highlight" data-i18n="values.title2">Trabajo</span></h2>
+            </div>
+            <div class="values-grid">
+                <div class="glass-card value-card fade-up">
+                    <i class="fas fa-comments"></i>
+                    <h4 data-i18n="values.comm_title">Comunicación clara</h4>
+                    <p data-i18n="values.comm_desc">Sin tecnicismos innecesarios: te explico cada decisión.</p>
+                </div>
+                <div class="glass-card value-card fade-up">
+                    <i class="fas fa-bullseye"></i>
+                    <h4 data-i18n="values.res_title">Resultados medibles</h4>
+                    <p data-i18n="values.res_desc">Cada diseño busca más conversiones y ventas.</p>
+                </div>
+                <div class="glass-card value-card fade-up">
+                    <i class="fas fa-bolt"></i>
+                    <h4 data-i18n="values.del_title">Entrega puntual</h4>
+                    <p data-i18n="values.del_desc">Los plazos acordados se cumplen.</p>
+                </div>
+                <div class="glass-card value-card fade-up">
+                    <i class="fas fa-heart"></i>
+                    <h4 data-i18n="values.det_title">Cuidado por el detalle</h4>
+                    <p data-i18n="values.det_desc">Espaciados y colores hacen la diferencia.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MI TRAYECTORIA (TIMELINE) -->
+        <section id="timeline">
+            <div class="section-header reveal-text">
+                <h2><span data-i18n="time.title1">Mi</span> <br><span class="highlight" data-i18n="time.title2">Trayectoria</span></h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item fade-up">
+                    <span class="timeline-date">2023</span>
+                    <h4 data-i18n="time.1.title">Inicios como freelancer</h4>
+                    <p data-i18n="time.1.desc">Primeros proyectos de diseño web y marketing digital.</p>
+                </div>
+                <div class="timeline-item fade-up">
+                    <span class="timeline-date">2024</span>
+                    <h4 data-i18n="time.2.title">Certificaciones</h4>
+                    <p data-i18n="time.2.desc">Website Design, AI Technology y Canva Design.</p>
+                </div>
+                <div class="timeline-item fade-up">
+                    <span class="timeline-date">2025</span>
+                    <h4 data-i18n="time.3.title">Marketing y datos</h4>
+                    <p data-i18n="time.3.desc">Digital Marketing y Data Analytics.</p>
+                </div>
+                <div class="timeline-item fade-up">
+                    <span class="timeline-date">2026</span>
+                    <h4 data-i18n="time.4.title">Estudio digital</h4>
+                    <p data-i18n="time.4.desc">JamsLab Studio: diseño, marketing y productos.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- PROYECTOS -->
-        <section id="proyectos" class="projects-section">
+        <section id="proyectos" class="projects-section" style="background: rgba(255,255,255,0.01);">
             <div class="section-header reveal-text">
                 <h2><span data-i18n="proj.title1">Proyectos</span> <br><span class="highlight" data-i18n="proj.title2">Destacados</span></h2>
             </div>
@@ -272,7 +319,7 @@
         </section>
 
         <!-- SERVICIOS -->
-        <section id="servicios" class="services-section" style="background: rgba(255,255,255,0.01);">
+        <section id="servicios" class="services-section">
             <div class="section-header reveal-text">
                 <h2><span data-i18n="serv.title1">Planes &</span> <br><span class="highlight" data-i18n="serv.title2">Servicios</span></h2>
             </div>
@@ -310,14 +357,12 @@
             </div>
         </section>
 
-        <!-- CONTACTO CON FORMULARIO Y REDES -->
-        <section id="contacto" class="contact-section">
+        <!-- CONTACTO -->
+        <section id="contacto" class="contact-section" style="background: rgba(255,255,255,0.01);">
             <div class="section-header reveal-text">
                 <h2><span data-i18n="cta.title1">¿Trabajamos</span> <br><span class="highlight" data-i18n="cta.title2">Juntos?</span></h2>
             </div>
-            
             <div class="contact-grid">
-                <!-- Información -->
                 <div class="glass-card contact-info fade-up">
                     <h3 data-i18n="contact.info_title">Información de contacto</h3>
                     <p data-i18n="contact.info_desc">Puedes escribirme por cualquiera de estos medios o llenar el formulario.</p>
@@ -333,8 +378,6 @@
                         <i class="fas fa-briefcase"></i>
                         <a href="https://www.fiverr.com/s/xLZLbj0" target="_blank">Fiverr · JamsLab Studio</a>
                     </div>
-                    
-                    <!-- Redes sociales (Enlaces reales) -->
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/jamsle-porcena-917593297/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://github.com/jamsle-web" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -342,21 +385,16 @@
                         <a href="https://www.fiverr.com/s/xLZLbj0" target="_blank" aria-label="Fiverr"><i class="fas fa-star"></i></a>
                     </div>
                 </div>
-
-                <!-- Formulario Formspree -->
                 <form class="glass-card contact-form fade-up" action="https://formspree.io/f/mkjoappw" method="POST">
                     <input type="text" name="name" placeholder="Nombre completo" required data-i18n-placeholder="contact.form_name" />
                     <input type="email" name="email" placeholder="Correo electrónico" required data-i18n-placeholder="contact.form_email" />
                     <input type="text" name="subject" placeholder="Asunto" data-i18n-placeholder="contact.form_subject" />
                     <textarea name="message" placeholder="Cuéntame sobre tu proyecto..." required data-i18n-placeholder="contact.form_message"></textarea>
-                    <button type="submit" class="btn-magnetic" style="justify-content:center; width:100%;">
-                        <i class="fas fa-paper-plane"></i> <span data-i18n="contact.form_submit">Enviar mensaje</span>
-                    </button>
+                    <button type="submit" class="btn-magnetic" style="justify-content:center; width:100%;"><i class="fas fa-paper-plane"></i> <span data-i18n="contact.form_submit">Enviar mensaje</span></button>
                 </form>
             </div>
         </section>
 
-        <!-- FOOTER -->
         <footer class="site-footer">
             <div class="footer-content glass-card">
                 <p>© 2026 Jamsle Porcena. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
@@ -365,7 +403,6 @@
         </footer>
     </main>
 
-    <!-- NAV ISLAND -->
     <nav class="nav-island fade-up">
         <a href="#inicio" class="nav-link active"><i class="fas fa-home"></i> <span data-i18n="nav.home">Inicio</span></a>
         <a href="#sobremi" class="nav-link"><i class="fas fa-user"></i> <span data-i18n="nav.about">Sobre mí</span></a>
@@ -379,7 +416,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
-
     <script src="script.js"></script>
 </body>
 </html>

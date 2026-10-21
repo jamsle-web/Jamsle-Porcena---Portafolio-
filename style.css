@@ -93,13 +93,43 @@ h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.5rem); line
 .lang-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; justify-content: center; }
 .lang-list span { padding: 8px 16px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 50px; font-size: 0.85rem; color: var(--text-muted); }
 
-/* SKILLS */
+/* SKILLS (REDISEÑADO CON PÍLDORAS E ICONOS) */
 .skills-bento { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto; }
 .bento-item { padding: 30px; border-radius: 24px; }
 .large { grid-column: span 2; grid-row: span 2; }
 .medium { grid-column: span 2; }
 .wide { grid-column: span 3; }
 .bento-icon { width: 45px; height: 45px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: rgba(168,185,204,0.1); color: var(--accent); margin-bottom: 15px; }
+
+.stack-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+.stack-list span { 
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 6px 14px; background: rgba(255,255,255,0.05); 
+    border: 1px solid rgba(255,255,255,0.1); border-radius: 50px; 
+    font-size: 0.8rem; color: #ddd; font-weight: 500;
+    transition: all 0.3s ease;
+}
+.stack-list span:hover { background: rgba(255,255,255,0.1); border-color: var(--accent); transform: translateY(-2px); }
+
+/* VALORES */
+.values-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto; }
+.value-card { padding: 30px 20px; border-radius: 20px; text-align: center; }
+.value-card i { font-size: 1.6rem; color: var(--accent); margin-bottom: 15px; }
+.value-card h4 { font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 8px; }
+.value-card p { font-size: 0.85rem; margin: 0; }
+
+/* TIMELINE */
+.timeline { position: relative; max-width: 800px; margin: 0 auto; }
+.timeline::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: linear-gradient(to bottom, transparent, var(--glass-border), transparent); transform: translateX(-50%); }
+.timeline-item { position: relative; width: 50%; padding: 20px 40px; }
+.timeline-item:nth-child(odd) { left: 0; text-align: right; }
+.timeline-item:nth-child(even) { left: 50%; }
+.timeline-item::before { content: ''; position: absolute; top: 25px; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 10px var(--accent); }
+.timeline-item:nth-child(odd)::before { right: -5px; }
+.timeline-item:nth-child(even)::before { left: -5px; }
+.timeline-date { font-family: var(--font-display); font-size: 0.8rem; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; }
+.timeline-item h4 { font-family: var(--font-display); font-size: 1.1rem; margin: 5px 0; }
+.timeline-item p { font-size: 0.85rem; margin: 0; }
 
 /* PROYECTOS */
 .filter-tabs { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; justify-content: center; }
@@ -127,7 +157,7 @@ h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.5rem); line
 .pricing-card ul li { padding: 6px 0; font-size: 0.85rem; color: var(--text-muted); display: flex; gap: 8px; }
 .pricing-card ul li i { color: #4ade80; margin-top: 3px; }
 
-/* CONTACTO CON FORMULARIO */
+/* CONTACTO */
 .contact-section { padding: 80px 5vw; }
 .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 30px; max-width: 1200px; margin: 0 auto; }
 .contact-info { padding: 40px; display: flex; flex-direction: column; justify-content: center; }
@@ -161,26 +191,14 @@ h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.5rem); line
 .nav-link:hover { color: #fff; background: rgba(255,255,255,0.05); }
 .nav-link.active { color: #000; background: #fff; box-shadow: 0 0 20px rgba(255,255,255,0.3); }
 
-/* --- MENÚ DESPLEGABLE DE CV (CORREGIDO) --- */
+/* MENÚ DE CV */
 .cv-dropdown-container { position: relative; display: inline-block; }
 .cv-menu {
-    position: absolute; 
-    top: -110px; /* Se abre hacia arriba para que no lo corte el cristal */
-    left: 0; 
-    background: rgba(10,10,10,0.95); /* Un poco más oscuro para que resalte */
-    border: 1px solid var(--glass-border); 
-    border-radius: 15px; 
-    padding: 8px;
-    display: flex; 
-    flex-direction: column; 
-    gap: 4px; 
-    backdrop-filter: blur(25px);
-    opacity: 0; 
-    pointer-events: none; 
-    transform: translateY(10px); /* Animación desde abajo */
-    transition: all 0.3s ease; 
-    min-width: 220px; 
-    z-index: 1000;
+    position: absolute; top: -110px; left: 0; background: rgba(10,10,10,0.95);
+    border: 1px solid var(--glass-border); border-radius: 15px; padding: 8px;
+    display: flex; flex-direction: column; gap: 4px; backdrop-filter: blur(25px);
+    opacity: 0; pointer-events: none; transform: translateY(10px);
+    transition: all 0.3s ease; min-width: 220px; z-index: 1000;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 .cv-menu.active { opacity: 1; pointer-events: auto; transform: translateY(0); }
@@ -198,12 +216,13 @@ h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.5rem); line
     .hero-text { text-align: center; }
     .hero-actions { justify-content: center; }
     .hero-portrait { max-width: 350px; margin: 30px auto 0; }
-    .projects-grid, .pricing-grid, .contact-grid { grid-template-columns: 1fr; }
-    .project-card.featured { grid-column: span 1; }
+    .projects-grid, .pricing-grid, .contact-grid, .values-grid { grid-template-columns: repeat(2, 1fr); }
+    .project-card.featured { grid-column: span 2; }
     .skills-bento { grid-template-columns: repeat(2, 1fr); }
     .large, .medium, .wide { grid-column: span 2; }
-    
-    /* En móvil, ajustamos el menú CV */
+    .timeline::before { left: 20px; }
+    .timeline-item { width: 100%; left: 0 !important; text-align: left !important; padding-left: 40px; padding-right: 0; }
+    .timeline-item::before { left: 15px !important; right: auto !important; }
     .cv-menu { top: 60px; transform: translateY(-10px); } 
     .cv-menu.active { transform: translateY(0); }
 }
@@ -213,6 +232,8 @@ h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.5rem); line
     .header-nav a { font-size: 0.75rem; }
     .header-right .lang-btn-main { width: 35px; height: 35px; font-size: 0.9rem; }
     .nav-island { display: none; }
+    .projects-grid, .pricing-grid, .contact-grid, .values-grid { grid-template-columns: 1fr; }
+    .project-card.featured { grid-column: span 1; }
     .skills-bento { grid-template-columns: 1fr; }
     .large, .medium, .wide { grid-column: span 1; }
     h1 { min-height: 80px; }
