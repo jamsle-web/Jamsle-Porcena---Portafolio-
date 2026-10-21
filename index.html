@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO PRO -->
+    <title>Jamsle Porcena | Diseño Web, UI/UX & Marketing Digital</title>
+    <meta name="description" content="Portafolio oficial de Jamsle Porcena. Especialista en diseño web, UI/UX, desarrollo frontend y marketing digital.">
+    <meta name="keywords" content="Jamsle Porcena, diseño web, UI/UX, desarrollador frontend, marketing digital, portafolio, Three.js, GSAP">
+    <meta name="author" content="Jamsle Porcena">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Jamsle Porcena | Diseño Web & Marketing Digital">
+    <meta property="og:description" content="Transformo ideas en identidades digitales sólidas. Combino diseño, tecnología e IA para hacer crecer tu marca.">
+    <meta property="og:image" content="https://i.postimg.cc/SKrgYWmr/Retrato-de-un-202604091107-(1).jpg">
+    
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jamsle Porcena",
+      "jobTitle": "Diseñador Web & Especialista en Marketing Digital",
+      "sameAs": [
+        "https://www.fiverr.com/s/xLZLbj0",
+        "https://www.linkedin.com/in/jamsle-porcena-917593297/",
+        "https://www.youtube.com/@WilkyJamesDev",
+        "https://github.com/jamsle-web"
+      ]
+    }
+    </script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Tu CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="scroll-progress"></div>
+    <canvas id="webgl-canvas"></canvas>
+
+    <div class="loader">
+        <div class="loader-text">JP</div>
+    </div>
+
+    <!-- HEADER (MENÚ DEL TECHO) -->
+    <header class="main-header" id="mainHeader">
+        <a href="#inicio" class="header-logo">JP</a>
+        <nav class="header-nav">
+            <a href="#inicio" class="active">Inicio</a>
+            <a href="#sobremi">Sobre mí</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="header-right">
+            <!-- Selector de Idiomas -->
+            <div class="lang-switcher-container">
+                <button class="lang-btn-main" id="langBtn"><i class="fas fa-globe"></i></button>
+                <div class="lang-menu" id="langMenu">
+                    <button class="lang-opt" data-lang="es">Español</button>
+                    <button class="lang-opt" data-lang="en">English</button>
+                    <button class="lang-opt" data-lang="fr">Français</button>
+                    <button class="lang-opt" data-lang="pt">Português</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="content-wrapper">
+        <!-- HERO -->
+        <section class="hero" id="inicio">
+            <div class="glass-panel hero-panel">
+                <div class="hero-text">
+                    <div class="badge fade-up">
+                        <span class="dot"></span>
+                        <span data-i18n="hero.badge">Disponible para proyectos</span>
+                    </div>
+                    <h1 class="reveal-text">
+                        <span data-i18n="hero.greet">Hola, soy</span><br>
+                        <span class="highlight" id="typewriter-text"></span>
+                    </h1>
+                    <p class="fade-up" data-i18n="hero.desc">
+                        Diseñador web y especialista en marketing digital apasionado por transformar ideas en identidades digitales sólidas. Combino diseño, tecnología e IA para hacer crecer tu marca.
+                    </p>
+                    <div class="hero-actions fade-up">
+                        <a href="#proyectos" class="btn-magnetic">
+                            <i class="fas fa-arrow-right"></i> <span data-i18n="hero.btn_projects">Ver proyectos</span>
+                        </a>
+                        <a href="https://wa.me/18099995904" target="_blank" class="btn-glass">
+                            <i class="fas fa-paper-plane"></i> <span data-i18n="hero.btn_contact">Hablemos</span>
+                        </a>
+                        
+                        <!-- BOTÓN DE DESCARGA CON MENÚ DESPLEGABLE -->
+                        <div class="cv-dropdown-container">
+                            <button class="btn-glass" id="cvBtn">
+                                <i class="fas fa-download"></i> <span data-i18n="hero.btn_cv">Descargar CV</span>
+                            </button>
+                            <div class="cv-menu" id="cvMenu">
+                                <a href="cv-marketing.pdf" target="_blank" class="cv-opt">
+                                    <i class="fas fa-bullhorn"></i> <span data-i18n="cv.marketing">CV Marketing & Design</span>
+                                </a>
+                                <a href="cv-languages.pdf" target="_blank" class="cv-opt">
+                                    <i class="fas fa-language"></i> <span data-i18n="cv.languages">CV Languages Specialist</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="hero-portrait fade-up">
+                    <div class="portrait-inner">
+                        <img src="https://i.postimg.cc/SKrgYWmr/Retrato-de-un-202604091107-(1).jpg" alt="Jamsle Porcena" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE MÍ -->
+        <section id="sobremi" style="background: rgba(255,255,255,0.01);">
+            <div class="section-header reveal-text">
+                <h2><span data-i18n="about.title1">Sobre</span> <span class="highlight" data-i18n="about.title2">mí</span></h2>
+            </div>
+            <div class="about-text glass-card" style="padding: 50px;">
+                <h3 style="font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 20px;" data-i18n="about.h3">Del Caribe al mundo digital</h3>
+                <p data-i18n="about.p1">Crecí entre culturas —francesa, haitiana y dominicana— y esa mezcla forma parte de cómo entiendo el diseño: como un puente entre lo que una marca quiere decir y cómo la gente realmente la percibe.</p>
+                <p data-i18n="about.p2">Empecé programando páginas simples por curiosidad, y con el tiempo esa curiosidad se convirtió en una carrera enfocada en diseño web (UI/UX), optimización SEO y marketing basado en datos. Hoy combino diseño, tecnología e inteligencia artificial para ayudar a empresas y emprendedores a construir una identidad digital fuerte, funcional y memorable.</p>
+                <p><i class="fas fa-bolt" style="color: var(--accent-2); margin-right: 6px;"></i> <span data-i18n="about.p3">Fuera de la pantalla, sigo aprendiendo constantemente: cada certificación, cada proyecto y cada cliente me enseña algo nuevo que llevo al siguiente trabajo.</span></p>
+                
+                <div class="lang-list">
+                    <span><strong data-i18n="lang.fr">Francés</strong> · <span data-i18n="lang.native">Nativo</span></span>
+                    <span><strong data-i18n="lang.ht">Creole</strong> · <span data-i18n="lang.native">Nativo</span></span>
+                    <span><strong data-i18n="lang.pt">Portugués</strong> · <span data-i18n="lang.basic">Básico</span></span>
+                    <span><strong data-i18n="lang.es">Español</strong> · <span data-i18n="lang.fluid">Fluido</span></span>
+                    <span><strong data-i18n="lang.en">Inglés</strong> · <span data-i18n="lang.adv">Avanzado (C1)</span></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills">
+            <div class="section-header reveal-text">
+                <h2><span data-i18n="skills.title1">Stack &</span> <br><span class="highlight" data-i18n="skills.title2">Habilidades</span></h2>
+            </div>
+            <div class="skills-bento">
+                <div class="glass-card bento-item large fade-up">
+                    <div class="card-content">
+                        <div class="bento-icon"><i class="fas fa-code"></i></div>
+                        <div class="tag" style="margin-top:15px;" data-i18n="skills.frontend">Frontend</div>
+                        <h3 data-i18n="skills.dev_title">Desarrollo Creativo</h3>
+                        <p data-i18n="skills.dev_desc">Interfaces inmersivas con HTML5, CSS3, JavaScript, Three.js y GSAP.</p>
+                        <div class="stack-list" style="margin-top:auto;">
+                            <span>HTML5</span><span>CSS3</span><span>JS</span><span>Three.js</span><span>GSAP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card bento-item medium fade-up">
+                    <div class="card-content">
+                        <div class="bento-icon"><i class="fas fa-pencil-ruler"></i></div>
+                        <div class="tag" style="margin-top:15px;" data-i18n="skills.design">Diseño</div>
+                        <h3>UI / UX</h3>
+                        <p data-i18n="skills.uiux_desc">Sistemas visuales, prototipado y landing pages optimizadas.</p>
+                    </div>
+                </div>
+                <div class="glass-card bento-item small fade-up">
+                    <div class="card-content">
+                        <div class="bento-icon"><i class="fas fa-tools"></i></div>
+                        <h3 data-i18n="skills.tools">Tools</h3>
+                        <p data-i18n="skills.tools_desc">Figma, VS Code, WordPress, Webflow, Git.</p>
+                    </div>
+                </div>
+                <div class="glass-card bento-item wide fade-up">
+                    <div class="card-content">
+                        <div class="tag" data-i18n="skills.workflow">Workflow</div>
+                        <h3 data-i18n="skills.spec_title">Especialidades & Herramientas</h3>
+                        <div class="stack-list" style="margin-top:10px;">
+                            <span>SEO</span><span>UX Research</span><span>Landing Pages</span>
+                            <span>CMS</span><span data-i18n="skills.ai">IA & Edición</span><span>WordPress</span>
+                            <span>Webflow</span><span>Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROYECTOS -->
+        <section id="proyectos" class="projects-section">
+            <div class="section-header reveal-text">
+                <h2><span data-i18n="proj.title1">Proyectos</span> <br><span class="highlight" data-i18n="proj.title2">Destacados</span></h2>
+            </div>
+            <div class="filter-tabs fade-up">
+                <button class="active" data-filter="all" data-i18n="proj.filter_all">Todos</button>
+                <button data-filter="uiux" data-i18n="proj.filter_uiux">UI/UX</button>
+                <button data-filter="desarrollo" data-i18n="proj.filter_dev">Desarrollo</button>
+                <button data-filter="ecommerce" data-i18n="proj.filter_ecom">E-commerce</button>
+            </div>
+            <div class="projects-grid">
+                <div class="glass-card project-card featured fade-up" data-category="desarrollo uiux">
+                    <div class="card-content">
+                        <div class="project-cover"><img src="https://i.postimg.cc/tJj4pPpz/IMXJh-Zesr-Oyx8.png" alt="Aetheris" loading="lazy"></div>
+                        <div class="tag">Three.js · GSAP · WebGL</div>
+                        <h3>Aetheris · Landing page</h3>
+                        <p data-i18n="proj.aetheris.desc">Experiencia web inmersiva con efecto glass, animaciones 3D y diseño futurista.</p>
+                    </div>
+                </div>
+                <div class="glass-card project-card fade-up" data-category="desarrollo uiux">
+                    <div class="card-content">
+                        <div class="project-cover"><img src="https://i.postimg.cc/FR4TrL4v/IMOGBd-SDw274M.png" alt="DevPath" loading="lazy"></div>
+                        <div class="tag">HTML5 · CSS3 · JS</div>
+                        <h3>DevPath 2027</h3>
+                        <p data-i18n="proj.devpath.desc">Plataforma educativa con hoja de ruta para desarrolladores web.</p>
+                        <div class="project-footer"><a href="https://devpath-2027-lyart.vercel.app/" target="_blank" class="project-arrow"><span data-i18n="proj.demo">Ver demo</span> <i class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                </div>
+                <div class="glass-card project-card fade-up" data-category="ecommerce uiux">
+                    <div class="card-content">
+                        <div class="project-cover"><img src="https://i.postimg.cc/KjX3SPhG/grooming-website.png" alt="Grooming" loading="lazy"></div>
+                        <div class="tag">HTML5 · CSS3</div>
+                        <h3>Gentleman's Grooming</h3>
+                        <p data-i18n="proj.grooming.desc">Tienda online premium con diseño elegante y minimalista.</p>
+                        <div class="project-footer"><a href="https://jamsle-web.github.io/Gentleman-s-Groomin/" target="_blank" class="project-arrow"><span data-i18n="proj.demo">Ver demo</span> <i class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                </div>
+                <div class="glass-card project-card fade-up" data-category="uiux desarrollo">
+                    <div class="card-content">
+                        <div class="project-cover"><img src="https://i.postimg.cc/L8SRG0y4/IMZ78TX4X6W5w.png" alt="Santo Sabor" loading="lazy"></div>
+                        <div class="tag">Figma · Webflow</div>
+                        <h3>Santo Sabor</h3>
+                        <p data-i18n="proj.santo.desc">Rediseño de identidad digital para marca local.</p>
+                    </div>
+                </div>
+                <div class="glass-card project-card fade-up" data-category="uiux desarrollo">
+                    <div class="card-content">
+                        <div class="project-cover"><img src="https://i.postimg.cc/K8bFCs9L/Study-Flow-AI.png" alt="StudyFlow" loading="lazy"></div>
+                        <div class="tag">AI · UI/UX</div>
+                        <h3>StudyFlow AI</h3>
+                        <p data-i18n="proj.studyflow.desc">Aplicación educativa impulsada por IA.</p>
+                    </div>
+                </div>
+                <div class="glass-card project-card fade-up" data-category="ecommerce desarrollo">
+                    <div class="card-content">
+                        <div class="project-cover"><img src="https://i.postimg.cc/TYDDM90H/IMcib-Ay-Zz-EZg4.png" alt="Sabor Urbano" loading="lazy"></div>
+                        <div class="tag">Glassmorphism · JS</div>
+                        <h3>Sabor Urbano</h3>
+                        <p data-i18n="proj.urbano.desc">Demo premium para cafetería con carrito funcional.</p>
+                    </div>
+                </div>
+                <div class="glass-card project-card fade-up" data-category="uiux desarrollo">
+                    <div class="card-content">
+                        <div class="project-cover"><img src="https://i.postimg.cc/4xGZjF8x/IMGy-Zk1U6B1cw.png" alt="Burger King" loading="lazy"></div>
+                        <div class="tag">Figma · JS</div>
+                        <h3>Burger King</h3>
+                        <p data-i18n="proj.bk.desc">Rediseño conceptual de interfaz web.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICIOS -->
+        <section id="servicios" class="services-section" style="background: rgba(255,255,255,0.01);">
+            <div class="section-header reveal-text">
+                <h2><span data-i18n="serv.title1">Planes &</span> <br><span class="highlight" data-i18n="serv.title2">Servicios</span></h2>
+            </div>
+            <div class="pricing-grid">
+                <div class="glass-card pricing-card fade-up">
+                    <h4 data-i18n="serv.plan1_name">Landing Page</h4>
+                    <div class="plan-price">$180</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> <span data-i18n="serv.plan1_f1">Diseño de 1 página</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="serv.plan1_f2">Responsive</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="serv.plan1_f4">SEO básica</span></li>
+                    </ul>
+                    <a href="https://wa.me/18099995904" target="_blank" class="btn-glass" style="justify-content:center;" data-i18n="serv.btn">Solicitar</a>
+                </div>
+                <div class="glass-card pricing-card featured fade-up">
+                    <h4 data-i18n="serv.plan2_name">Sitio Web Completo</h4>
+                    <div class="plan-price">$450</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> <span data-i18n="serv.plan2_f1">Hasta 5 páginas</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="serv.plan2_f2">Diseño personalizado</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="serv.plan2_f4">SEO + Analytics</span></li>
+                    </ul>
+                    <a href="https://wa.me/18099995904" target="_blank" class="btn-magnetic" style="justify-content:center;" data-i18n="serv.btn">Solicitar</a>
+                </div>
+                <div class="glass-card pricing-card fade-up">
+                    <h4 data-i18n="serv.plan3_name">Marca + Marketing</h4>
+                    <div class="plan-price">$850</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> <span data-i18n="serv.plan3_f1">Todo el plan Web</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="serv.plan3_f2">Logo + manual</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="serv.plan3_f4">SEO avanzado</span></li>
+                    </ul>
+                    <a href="https://wa.me/18099995904" target="_blank" class="btn-glass" style="justify-content:center;" data-i18n="serv.btn">Solicitar</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO CON FORMULARIO Y REDES -->
+        <section id="contacto" class="contact-section">
+            <div class="section-header reveal-text">
+                <h2><span data-i18n="cta.title1">¿Trabajamos</span> <br><span class="highlight" data-i18n="cta.title2">Juntos?</span></h2>
+            </div>
+            
+            <div class="contact-grid">
+                <!-- Información -->
+                <div class="glass-card contact-info fade-up">
+                    <h3 data-i18n="contact.info_title">Información de contacto</h3>
+                    <p data-i18n="contact.info_desc">Puedes escribirme por cualquiera de estos medios o llenar el formulario.</p>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+18099995904">+1 (809) 999-59-04</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:porcenatjamsle07@gmail.com">porcenatjamsle07@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-briefcase"></i>
+                        <a href="https://www.fiverr.com/s/xLZLbj0" target="_blank">Fiverr · JamsLab Studio</a>
+                    </div>
+                    
+                    <!-- Redes sociales (Enlaces reales) -->
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/jamsle-porcena-917593297/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/jamsle-web" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.youtube.com/@WilkyJamesDev" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.fiverr.com/s/xLZLbj0" target="_blank" aria-label="Fiverr"><i class="fas fa-star"></i></a>
+                    </div>
+                </div>
+
+                <!-- Formulario Formspree -->
+                <form class="glass-card contact-form fade-up" action="https://formspree.io/f/mkjoappw" method="POST">
+                    <input type="text" name="name" placeholder="Nombre completo" required data-i18n-placeholder="contact.form_name" />
+                    <input type="email" name="email" placeholder="Correo electrónico" required data-i18n-placeholder="contact.form_email" />
+                    <input type="text" name="subject" placeholder="Asunto" data-i18n-placeholder="contact.form_subject" />
+                    <textarea name="message" placeholder="Cuéntame sobre tu proyecto..." required data-i18n-placeholder="contact.form_message"></textarea>
+                    <button type="submit" class="btn-magnetic" style="justify-content:center; width:100%;">
+                        <i class="fas fa-paper-plane"></i> <span data-i18n="contact.form_submit">Enviar mensaje</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="footer-content glass-card">
+                <p>© 2026 Jamsle Porcena. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+                <p class="signature"><span data-i18n="footer.design">Diseñado por</span> Jamsle Porcena</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- NAV ISLAND -->
+    <nav class="nav-island fade-up">
+        <a href="#inicio" class="nav-link active"><i class="fas fa-home"></i> <span data-i18n="nav.home">Inicio</span></a>
+        <a href="#sobremi" class="nav-link"><i class="fas fa-user"></i> <span data-i18n="nav.about">Sobre mí</span></a>
+        <a href="#skills" class="nav-link"><i class="fas fa-code"></i> <span data-i18n="nav.skills">Skills</span></a>
+        <a href="#proyectos" class="nav-link"><i class="fas fa-book-open"></i> <span data-i18n="nav.proj">Proyectos</span></a>
+        <a href="#servicios" class="nav-link"><i class="fas fa-briefcase"></i> <span data-i18n="nav.serv">Servicios</span></a>
+        <a href="#contacto" class="nav-link"><i class="fas fa-envelope"></i> <span data-i18n="nav.contact">Contacto</span></a>
+    </nav>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
