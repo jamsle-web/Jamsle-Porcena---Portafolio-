@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jamsle-porcena-portafolio.vercel.app/sitemap.xml
